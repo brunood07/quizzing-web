@@ -8,8 +8,8 @@ export const ContentCard = (props: ContentCardProps) => {
 
   return (
     <main
-      className={`flex w-full max-w-[1140px] h-screen lg:max-h-[700px] m-auto shadow-[px 1px 2px rgba(0, 0, 0, 0.25)] rounded-xl bg-purple-500 lg:mt-20 ${
-        isMobile ? "flex-col" : "flex-row"
+      className={`flex w-full max-w-[1140px] lg:h-screen lg:max-h-[700px] m-auto shadow-[px 1px 2px rgba(0, 0, 0, 0.25)] lg:my-10 ${
+        isMobile ? "flex-col overflow-y-scroll" : "flex-row rounded-xl"
       }`}
     >
       {children}
