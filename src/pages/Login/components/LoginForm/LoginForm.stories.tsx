@@ -1,13 +1,13 @@
 import React from "react";
 import { Story } from "@storybook/react";
-import { Header } from ".";
+import { LoginForm } from ".";
 
-const Template: Story = (args) => <Header {...args} />;
+const Template: Story = (args) => <LoginForm {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};
 
 export default {
-  title: "Components/Header",
-  component: Header,
+  title: "Components/LoginForm",
+  component: LoginForm,
 };

@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 body {
-  font-style: Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }

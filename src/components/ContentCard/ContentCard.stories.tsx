@@ -11,7 +11,7 @@ export const Default = Template.bind({});
 Default.args = {};
 
 export default {
-  title: "ContentCard",
+  title: "Components/ContentCard",
   component: ContentCard,
   args: {
     children: "Teste",
