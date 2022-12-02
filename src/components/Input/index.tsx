@@ -1,10 +1,10 @@
 import { InputProps } from "./Input.types";
 
 export const Input = (props: InputProps) => {
-  const { errors, label } = props;
+  const { errors, label, margin } = props;
 
   return (
-    <div className="flex flex-col">
+    <div className={`flex flex-col h-full max-h-[90px] ${margin}`}>
       <label className="ml-1 text-sm text-purple-900">{label}</label>
       <input
         type="text"

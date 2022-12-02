@@ -1,4 +1,4 @@
-import { LockSimple } from "phosphor-react";
+import { LockSimple, LockSimpleOpen } from "phosphor-react";
 import { useState } from "react";
 
 import { SecureInputProps } from "./SecureInput.types";
@@ -6,14 +6,14 @@ import { SecureInputProps } from "./SecureInput.types";
 export const SecureInput = (props: SecureInputProps) => {
   const [showPassword, setShowPassword] = useState(false);
 
-  const { errors, label } = props;
+  const { errors, label, margin } = props;
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
 
   return (
-    <div className="flex flex-col">
+    <div className={`flex flex-col h-full max-h-[90px] ${margin}`}>
       <label className="ml-1 text-sm text-purple-900">{label}</label>
       <div className="flex flex-row relative w-[300px] items-center justify-center">
         <input
@@ -27,7 +27,11 @@ export const SecureInput = (props: SecureInputProps) => {
           className="absolute right-2 bottom-2"
           onClick={handleShowPassword}
         >
-          <LockSimple size={24} color="#8A8E91" />
+          {showPassword ? (
+            <LockSimpleOpen size={24} color="#8A8E91" />
+          ) : (
+            <LockSimple size={24} color="#8A8E91" />
+          )}
         </button>
       </div>
       {errors && (

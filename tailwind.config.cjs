@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "blue-50": "#B8D4E3",
         "blue-300": "#252530",
         "blue-500": "#1E1E24",
         "gray-300": "#D9D9D9",
@@ -12,6 +13,9 @@ module.exports = {
         "purple-500": "#9649CB",
         "purple-900": "#4F4789",
         "red-500": "#FF9494",
+      },
+      backgroundImage: {
+        hero: "url('./src/assets/hero.png')",
       },
     },
   },
