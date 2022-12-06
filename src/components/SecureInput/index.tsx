@@ -13,7 +13,7 @@ export const SecureInput = (props: SecureInputProps) => {
   };
 
   return (
-    <div className={`flex flex-col h-full max-h-[80px] ${addStyle}`}>
+    <div className={`flex flex-col h-full max-h-[85px] ${addStyle}`}>
       <label className="ml-1 text-sm text-purple-900">{label}</label>
       <div className="flex flex-row relative w-[300px] items-center justify-center">
         <input
@@ -36,7 +36,7 @@ export const SecureInput = (props: SecureInputProps) => {
         </button>
       </div>
       {errors && (
-        <span className="text-sm text-red-500 text-bold">{errors}</span>
+        <span className="text-sm text-red-500 text-bold">{errors.message}</span>
       )}
     </div>
   );

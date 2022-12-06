@@ -17,6 +17,7 @@
   "dependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
+    "@hookform/resolvers": "^2.9.10",
     "axios": "^1.2.1",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.5.0",

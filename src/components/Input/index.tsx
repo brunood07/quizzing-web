@@ -18,7 +18,7 @@ export const Input = (props: InputProps) => {
         {...props}
       />
       {errors && (
-        <span className="text-sm text-red-500 text-bold">{errors}</span>
+        <span className="text-sm text-red-500 text-bold">{errors.message}</span>
       )}
     </div>
   );
