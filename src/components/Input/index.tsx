@@ -1,16 +1,19 @@
 import { InputProps } from "./Input.types";
 
 export const Input = (props: InputProps) => {
-  const { errors, label, margin } = props;
+  const { errors, label, register, registerName, small = false } = props;
 
   return (
-    <div className={`flex flex-col h-full max-h-[90px] ${margin}`}>
+    <div className={`flex flex-col h-full max-h-[80px] `}>
       <label className="ml-1 text-sm text-purple-900">{label}</label>
       <input
         type="text"
-        className={`w-[300px] h-[40px] rounded-[4px] px-4 bg-gray-300 placeholder:py-3 mt-[6px] focus:outline-none focus:ring-2 focus:ring-offset-[#088F8F] ${
+        className={`w-[${
+          small ? "140px" : "300px"
+        }] h-[40px] rounded-[4px] px-4 bg-gray-300 placeholder:py-3 mt-[6px] focus:outline-none focus:ring-2 focus:ring-offset-[#088F8F] ${
           errors && "border-2 border-red-500"
         }`}
+        {...register(registerName)}
         {...props}
       />
       {errors && (

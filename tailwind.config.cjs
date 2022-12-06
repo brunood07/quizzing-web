@@ -16,6 +16,7 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('./src/assets/hero.png')",
+        signUp: "url('./src/assets/hero-sign-up.png')",
       },
     },
   },

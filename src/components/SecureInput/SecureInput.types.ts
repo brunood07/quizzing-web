@@ -4,5 +4,7 @@ export interface SecureInputProps
   extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   errors?: string;
-  margin?: string;
+  addStyle?: string;
+  registerName: string;
+  register: any;
 }

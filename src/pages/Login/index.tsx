@@ -7,7 +7,7 @@ export function Login() {
   const isMobile = useMediaContext();
 
   const handleConnect = () => {
-    scroll({ top: 1000, behavior: "smooth" });
+    scroll({ top: 2000, behavior: "smooth" });
   };
 
   return (
