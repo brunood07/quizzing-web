@@ -18,6 +18,9 @@ module.exports = {
         hero: "url('./src/assets/hero.png')",
         signUp: "url('./src/assets/hero-sign-up.png')",
       },
+      boxShadow: {
+        default: "0px 1px 2px rgba(0, 0, 0, 0.25)",
+      },
     },
   },
   plugins: [],

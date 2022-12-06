@@ -18,7 +18,7 @@ export const SecureInput = (props: SecureInputProps) => {
       <div className="flex flex-row relative w-[300px] items-center justify-center">
         <input
           type={showPassword ? "text" : "password"}
-          className={`w-full h-[40px] rounded-[4px] px-4 bg-gray-300 placeholder:py-3 mt-[6px] focus:outline-none focus:ring-2 focus:ring-offset-[#088F8F] ${
+          className={`w-full h-[40px] rounded-[4px] px-4 shadow-default bg-gray-300 placeholder:py-3 mt-[6px] focus:outline-none focus:ring-2 focus:ring-offset-[#088F8F] ${
             errors && "border-2 border-red-500"
           }`}
           {...register(registerName)}

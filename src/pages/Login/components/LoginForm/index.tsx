@@ -5,19 +5,24 @@ import { LoginFormProps } from "./LoginForm.types";
 import { Button } from "../../../../components/Button";
 import { Input } from "../../../../components/Input";
 import { SecureInput } from "../../../../components/SecureInput";
+import { useAuth } from "../../../../hooks/useAuth";
 
 export const LoginForm = () => {
+  const { login } = useAuth();
+
   const {
     register,
     formState: { isSubmitting },
+    handleSubmit,
   } = useForm();
 
-  const handleLogin = (data: LoginFormProps) => {
-    console.log(data);
+  const handleLogin = async (data: any) => {
+    const { email, password } = data;
+    return await login(email, password);
   };
 
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
+    <form onSubmit={handleSubmit(handleLogin)}>
       <Input
         label="Email"
         placeholder="Digite o seu email"

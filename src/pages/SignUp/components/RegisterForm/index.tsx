@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
 
+import { useProfile } from "../../../../hooks/useProfile";
+
 import { RegisterFormProps } from "./RegisterForm.types";
 
 import { Button } from "../../../../components/Button";
@@ -8,23 +10,22 @@ import { SecureInput } from "../../../../components/SecureInput";
 import { Spinner } from "../../../../components/Spinner";
 
 export const RegisterForm = () => {
+  const { createProfile } = useProfile();
   const {
     register,
     handleSubmit,
     formState: { isSubmitting, errors },
   } = useForm<RegisterFormProps>();
-  console.log(
-    "🚀 ~ file: index.tsx:15 ~ RegisterForm ~ isSubmitting",
-    isSubmitting
-  );
 
-  const handleRegisterSubmit = (data: RegisterFormProps) => {
-    setTimeout(() => {
-      console.log(
-        "🚀 ~ file: index.tsx:17 ~ handleRegisterSubmit ~ data",
-        data
-      );
-    }, 1000);
+  const handleRegisterSubmit = async (data: RegisterFormProps) => {
+    return await createProfile({
+      email: data.email,
+      password: data.password,
+      firstName: data.firstName,
+      lastName: data.lastName,
+      document: data.document,
+      dateOfBirth: data.dateOfBirth,
+    });
   };
 
   return (
@@ -52,14 +53,14 @@ export const RegisterForm = () => {
         <Input
           label="Data de nascimento"
           placeholder="01/12/1980"
-          small
+          width="140px"
           registerName="dateOfBirth"
           register={register}
         />
         <Input
           label="Documento (CPF)"
           placeholder="111.111.111-11"
-          small
+          width="140px"
           registerName="document"
           register={register}
         />

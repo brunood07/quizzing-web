@@ -5,5 +5,5 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   errors?: string;
   registerName: string;
   register: any;
-  small?: boolean;
+  width?: string;
 }

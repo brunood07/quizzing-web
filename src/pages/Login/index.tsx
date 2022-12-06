@@ -27,13 +27,7 @@ export function Login() {
           <p className="text-xl text-white">
             Aproveite e faça parte deste jogo
           </p>
-          {isMobile && (
-            <Button
-              buttonLabel="Conecte-se agora mesmo"
-              margin="mt-4"
-              onClick={handleConnect}
-            />
-          )}
+          {isMobile && <Button margin="mt-4" onClick={handleConnect} />}
         </div>
       </div>
       <div
